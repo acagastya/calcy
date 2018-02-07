@@ -10,7 +10,7 @@ html{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 }
 body{
   font: 1.5rem 'open_sanslight',sans-serif;
