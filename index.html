@@ -8,7 +8,7 @@
   <title>Calcy</title>
   <link href='./fonts/typography.css' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="calculator.css">
-  <link rel="shortcut-icon" sizes="256x256" href="/icons/256x256.png">
+  <link rel="shortcut-icon" sizes="256x256" href="./icons/256x256.png">
 
 
   <link rel="manifest" href="manifest.json">
@@ -23,16 +23,16 @@
   <meta name="msapplication-starturl" content="/">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <link rel="icon" sizes="48x48" href="/icons/16x16.png">
-  <link rel="apple-touch-icon" sizes="16x16" href="/icons/16x16.png">
-  <link rel="icon" sizes="48x48" href="/icons/24x24.png">
-  <link rel="apple-touch-icon" sizes="24x24" href="/icons/24x48.png">
-  <link rel="icon" sizes="48x48" href="/icons/48x48.png">
-  <link rel="apple-touch-icon" sizes="48x48" href="/icons/48x48.png">
-  <link rel="icon" sizes="48x48" href="/icons/128x128.png">
-  <link rel="apple-touch-icon" sizes="128x128" href="/icons/128x48.png">
-  <link rel="icon" sizes="256x256" href="/icons/256x256.png">
-  <link rel="apple-touch-icon" sizes="256x256" href="/icons/256x256.png">
+  <link rel="icon" sizes="48x48" href="./icons/16x16.png">
+  <link rel="apple-touch-icon" sizes="16x16" href="./icons/16x16.png">
+  <link rel="icon" sizes="48x48" href="./icons/24x24.png">
+  <link rel="apple-touch-icon" sizes="24x24" href="./icons/24x48.png">
+  <link rel="icon" sizes="48x48" href="./icons/48x48.png">
+  <link rel="apple-touch-icon" sizes="48x48" href="./icons/48x48.png">
+  <link rel="icon" sizes="48x48" href="./icons/128x128.png">
+  <link rel="apple-touch-icon" sizes="128x128" href="./icons/128x48.png">
+  <link rel="icon" sizes="256x256" href="./icons/256x256.png">
+  <link rel="apple-touch-icon" sizes="256x256" href="./icons/256x256.png">
 
 
 
@@ -91,6 +91,24 @@
     document.querySelector(".copy").addEventListener('click', function () {
 
     });
+  </script>
+  <script>
+    //This is the service worker with the combined offline experience (Offline page + Offline copy of pages)
+
+    //Add this below content to your HTML page, or add the js file to your page at the very top to register sercie worker
+    if (navigator.serviceWorker.controller) {
+      console.log('[PWA Builder] active service worker found, no need to register')
+    } else {
+
+      //Register the ServiceWorker
+      navigator.serviceWorker.register('sw.js', {
+        scope: './'
+      }).then(function (reg) {
+        console.log('Service worker has been registered for scope:' + reg.scope);
+      });
+    }
+
+
   </script>
 </body>
 
