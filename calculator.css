@@ -18,38 +18,18 @@ body{
   width: 100%;
   height: 100%;
 }
-@media only screen and (min-width: 500px) {
-  html{
-    background-color: #ddd;
-    background-image: url('https://www.camposanto.com/external/wallpapers/Launch_Green/FWG_2560x1440.jpg');
-    background-size: cover;
-  }
-  body {
-    width: 350px;
-    height: 475px;
-  }
-  .container{
-    background-color: #ddd;
-    box-shadow: 0px 0px 16px rgba(0,0,0,0.85);
-    height: 100%;
-  }
-}
+
 .container {
   border-radius: 8px;
   overflow: hidden;
   height: 100%;
 }
 .content{
-  height: calc(100% - 2.25rem);
+  height: calc(100%);
 }
 
-.top {
-  display: flex;
-  align-items: center;
-  padding: 4px;
-  background-color: rgba(0, 0, 0, 0.8);
-  user-select: none;
-  -webkit-app-region: drag;
+.top{
+  display: none;
 }
 .title{
   cursor: move;
@@ -66,7 +46,6 @@ body{
     cursor: pointer;
     -webkit-app-region: no-drag;
 }
-
 .close,.copy{
   color: transparent;
   font-size: 16px;
@@ -159,4 +138,33 @@ body{
 .eval:hover,.eval.active,.eval:active {
   background-color: #f44336;
   border: 1px solid #f44336;
+}
+
+
+@media only screen and (min-width: 500px) {
+  html{
+    background-color: #ddd;
+    background-image: url('https://www.camposanto.com/external/wallpapers/Launch_Green/FWG_2560x1440.jpg');
+    background-size: cover;
+  }
+  body {
+    width: 350px;
+    height: 475px;
+  }
+  .container{
+    background-color: #ddd;
+    box-shadow: 0px 0px 16px rgba(0,0,0,0.85);
+    height: 100%;
+  }
+  .top{
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    background-color: rgba(0, 0, 0, 0.8);
+    user-select: none;
+    -webkit-app-region: drag;
+  }
+  .content{
+    height: calc(100% - 2.25rem);
+  }
 }
