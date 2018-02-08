@@ -3,7 +3,7 @@
 *::before{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 html{
   font-size: 150%;
@@ -80,8 +80,8 @@ body{
 .btn{
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   user-select: none;
-  height: 2.25rem;
-  width: 2.25rem;
+  height: 2rem;
+  width: 2rem;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -160,7 +160,7 @@ body{
   }
   body {
     width: 350px;
-    height: 475px;
+    height: 500px;
   }
   .container{
     background-color: #ddd;
