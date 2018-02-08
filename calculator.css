@@ -45,21 +45,33 @@ body{
     cursor: pointer;
     -webkit-app-region: no-drag;
 }
-.close,.copy{
+.close,.site{
+  display: block;
   color: transparent;
-  font-size: 16px;
+  font-size: 0.9rem;
   font-weight: bold;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  position: relative;
   transition: color 0.3s;
+  text-decoration: none;
 }
 
-.close:hover,.copy:hover{
+.dot span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close{
+  transform: rotate(45deg);
+}
+
+.close:hover,.site:hover{
   color: #fff;
 }
-
-
 
 ::selection{
   background-color: #ff5722;
