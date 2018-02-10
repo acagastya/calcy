@@ -1,6 +1,6 @@
 # The Calcy App
 <p align="center">
-  <img alt="Calcy Icon" src="https://varundevpro.github.io/calcy/calcy-icon.png">
+  <img alt="Calcy Icon" src="https://varundevpro.github.io/calcy/assets/images/calcy-icon.png">
 </p>
 
 ## Table of Contents
