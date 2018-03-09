@@ -10,7 +10,7 @@ var preLoad = function () {
             '/',
             '/offline.html',
             '/index.html',
-            '/typography.css',
+            'fonts/typography.css',
             '/calculator.css',
             '/app.js',
         ]);
