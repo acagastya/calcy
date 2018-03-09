@@ -3,6 +3,8 @@
 *::before{
   margin: 0;
   padding: 0;
+  border: none;
+  font-family: inherit;
   /* box-sizing: border-box; */
 }
 html{
@@ -44,32 +46,29 @@ body{
     margin: 10px;
     cursor: pointer;
     -webkit-app-region: no-drag;
-}
-.close,.site{
-  display: block;
-  color: transparent;
-  font-size: 0.9rem;
-  font-weight: bold;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  position: relative;
-  transition: color 0.3s;
-  text-decoration: none;
-}
 
-.dot span{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    color: rgba(0, 0, 0, 0.2);
 }
 
 .close{
   transform: rotate(45deg);
 }
 
-.close:hover,.site:hover{
+.site span{
+  transform: translateY(1px);
+}
+
+.dot:focus,.close:hover,.site:hover{
+  outline: none;
   color: #fff;
 }
 
