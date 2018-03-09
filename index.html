@@ -41,10 +41,14 @@
 <body>
   <div class="container">
     <div class="top">
-      <a class="dot close" href="#" title="close" style="background:#ED594A;"><span>+</span></a>
+      <a class="dot close" href="#" title="close" style="background:#ED594A;">
+        <span>+</span>
+      </a>
       <!-- <div class="dot" title="Close" style="background:#FDD800;">&nbsp;</div> -->
       <p class="title">Calcy</p>
-      <a class="dot site" href="//calcy.ml" target="_blank" style="background:#5AC05A;" title="Open site"><span>+</span></a>
+      <a class="dot site" href="//calcy.ml" target="_blank" style="background:#5AC05A;" title="Open site">
+        <span>+</span>
+      </a>
     </div>
 
     <div class="content">
@@ -81,31 +85,8 @@
   </div>
 
 
-  <script src="app.js"></script>
-  <script>
-
-    document.querySelector(".close").addEventListener('click', function () {
-      window.close()
-    });
-
-  </script>
-  <script>
-    if (serviceWorker in navigator) {
-      console.log("Available SW API");
-
-      navigator.serviceWorker.register('./sw.js', {
-        scope: './'
-      }).then(function (reg) {
-        console.log('Service worker has been registered for scope:' + reg.scope);
-      }).catch(function (err) {
-        console.log("Can't reg sw.js");
-      });
-    } else {
-      console.log('Service worker error');
-    }
-
-
-  </script>
+  <script defer src="app.js"></script>
+  <script defer src="pwa.js"></script>
 </body>
 
 </html>
