@@ -87,6 +87,8 @@ function clicked(e,key) {
     if ((btnVal != '+') && (btnVal != '0') && (btnVal != '-')) {
       e.preventDefault();
     }
+  var $0 = document.querySelector(".screen p");
+  $0.scrollTo( $0.scrollWidth,0);
 
   }
 
