@@ -22,17 +22,24 @@ function listenkeys(e){
   }else if (e.key == "+" || e.key == "-" || e.key == "=" || e.key == "/" || e.key == ".") {
     clicked(e,e.key);
   }else if (e.key == "Backspace") {
-    input = document.querySelector('.screen p');
-    inputVal = input.textContent;
-    arr = inputVal.split('');
-    arr.pop();
-    input.textContent = arr.join('');
+   clearOne();
   }else if (e.key == "C" || e.key == "c") {
     cls();
   }else if (e.key == "Enter") {
     clicked(e,"=");
   }
 }
+
+document.querySelector(".backspace").onclick = clearOne;
+
+function clearOne() {
+  input = document.querySelector('.screen p');
+  inputVal = input.textContent;
+  arr = inputVal.split('');
+  arr.pop();
+  input.textContent = arr.join('');
+}
+
 function clicked(e,key) {
     input = document.querySelector('.screen p');
     inputVal = input.textContent;
